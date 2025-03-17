@@ -12,6 +12,7 @@ use neptune_explorer::neptune_rpc;
 use neptune_explorer::rpc::block_digest::block_digest;
 use neptune_explorer::rpc::block_info::block_info;
 use neptune_explorer::rpc::utxo_digest::utxo_digest;
+use neptune_explorer::rpc::mempool::mempool_overview;
 use tower_http::services::ServeDir;
 use tracing::info;
 use tracing_subscriber::EnvFilter;
@@ -53,6 +54,7 @@ pub fn setup_routes(app_state: AppState) -> Router {
         .route("/rpc/block_info/*selector", get(block_info))
         .route("/rpc/block_digest/*selector", get(block_digest))
         .route("/rpc/utxo_digest/:index", get(utxo_digest))
+        .route("/rpc/mempool/:start_index/:number", get(mempool_overview))
         // -- Dynamic HTML pages --
         .route("/", get(root))
         .route("/block/*selector", get(block_page))

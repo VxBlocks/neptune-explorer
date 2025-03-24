@@ -14,8 +14,8 @@ tracing = "0.1"
 tracing-subscriber = "0.3"
 
 # 89f5a1c2bb5f670071b71f2fef237c820e901f84 = 2025-01-22, almost to betanet-v2
-# neptune-cash = {git = "https://github.com/VxBlocks/neptune-core.git"}
-neptune-cash = {path = "../vx_neptune-core"}
+neptune-cash = {git = "https://github.com/VxBlocks/neptune-core.git"}
+# neptune-cash = {path = "../vx_neptune-core"}
 tarpc = { version = "^0.34", features = [
     "tokio1",
     "serde-transport",

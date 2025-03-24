@@ -14,7 +14,8 @@ tracing = "0.1"
 tracing-subscriber = "0.3"
 
 # 89f5a1c2bb5f670071b71f2fef237c820e901f84 = 2025-01-22, almost to betanet-v2
-neptune-cash = {git = "https://github.com/VxBlocks/neptune-core.git"}
+# neptune-cash = {git = "https://github.com/VxBlocks/neptune-core.git"}
+neptune-cash = {path = "../vx_neptune-core"}
 tarpc = { version = "^0.34", features = [
     "tokio1",
     "serde-transport",
@@ -40,6 +41,7 @@ derive_more = { version = "1.0.0", features = ["display"] }
 indexmap = "2.7.0"
 
 [patch.crates-io]
+time = { git = "https://github.com/time-rs/time.git", rev = "d4e39b3"}
 # 694f27daf78aade0ed0dc07e3babaab036cd5572 is tip of branch: master as of 2024-04-30
 #tasm-lib = { git = "https://github.com/TritonVM/tasm-lib.git", rev = "694f27daf78aade0ed0dc07e3babaab036cd5572" }
 
